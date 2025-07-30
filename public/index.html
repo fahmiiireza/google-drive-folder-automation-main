@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>N8N Packet Creator</title>
+  <style>
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Geist+Mono:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Google Drive Folder Automation</h1>
+
+    <form id="packetForm">
+      <div class="toggle-group">
+        <label for="isNew">Is New Project:</label>
+        <div class="toggle">
+          <input type="checkbox" id="isNew" checked />
+          <span class="slider"></span>
+        </div>
+      </div>
+
+      <div class="form-group" id="destinationField">
+        <label for="destinationFolderId">Destination Folder ID:</label>
+        <!-- CHANGE THIS THE "VALUE" ATTRIBUTE IN THE INPUT TO YOUR DESTINATION FOLDER ID-->
+        <input type="text" id="destinationFolderId" placeholder="e.g., 3xIdbHDj04iCiJS_8s3Y5Jmkh_bHOw42b"
+          value="3xIdbHDj04iCiJS_8s3Y5Jmkh_bHOw42b" />
+      </div>
+
+      <div class="form-group hidden" id="parentField">
+        <label for="parentPacketId">Parent Packet ID</label>
+        <input type="text" id="parentPacketId" placeholder="e.g., 1luNXV0w8-iFWJfdA2IFGT5K-x5SeT444" />
+      </div>
+
+      <div class="form-group" id="packetNameField">
+        <label for="packetName">Packet Name:</label>
+        <input type="text" id="packetName" placeholder="e.g., AT-VID23" />
+      </div>
+
+      <!-- <div class="form-group">
+          <label for="projectID">Project ID:</label>
+          <input type="text" id="projectID" placeholder="e.g., AT-VID23" />
+        </div> -->
+
+      <div class="form-group">
+        <label for="batchNum">Batch Number:</label>
+        <input type="text" id="batchNum" placeholder="e.g., 01" />
+      </div>
+
+      <div class="form-group">
+        <label for="variable">Variable:</label>
+        <input type="text" id="variable" placeholder="e.g., Hook-Test" />
+      </div>
+
+      <div class="form-group">
+        <label for="parentCreative">Parent Creative:</label>
+        <input type="text" id="parentCreative" placeholder="e.g., H2-BV3" />
+      </div>
+
+      <div class="form-group">
+        <label for="context">Context:</label>
+        <input type="text" id="context" placeholder="e.g., UGC3" />
+      </div>
+
+      <div class="form-group">
+        <div class="assets-group">
+          <div class="assets-title">Assets to Create:</div>
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input type="checkbox" id="script" name="assetsToCreate" value="script" checked />
+              <label for="script">Script</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="brief" name="assetsToCreate" value="brief" checked />
+              <label for="brief">Brief</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="source" name="assetsToCreate" value="source" checked />
+              <label for="source">Source</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="adCopy" name="assetsToCreate" value="adCopy" checked />
+              <label for="adCopy">Ad Copy</label>
+            </div>
+            <div class="checkbox-item">
+              <input type="checkbox" id="finalVideo" name="assetsToCreate" value="finalVideo" checked />
+              <label for="finalVideo">Final Video</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn" id="submitBtn">Create Packet</button>
+    </form>
+
+    <div class="response" id="response"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
