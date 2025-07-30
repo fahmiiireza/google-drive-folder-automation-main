@@ -4,11 +4,10 @@
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "googleapis": "^152.0.0",
-    "nodemon": "^3.1.10",
     "path": "^0.12.7"
   },
   "scripts": {
-    "s": "nodemon server.js"
+    "start": "node server.js"
   },
   "type": "module"
 }
